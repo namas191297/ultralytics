@@ -5,6 +5,7 @@
 name: Ultralytics Actions
 
 on:
+  push:
   issues:
     types: [opened, edited]
   discussion:
@@ -13,15 +14,10 @@ on:
     branches: [main]
     types: [opened, closed, synchronize, review_requested]
 
-
-permissions:
-  actions: write
-  contents: write
-  pull-requests: write
-  statuses: write
-  
 jobs:
   format:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Run Ultralytics Formatting
