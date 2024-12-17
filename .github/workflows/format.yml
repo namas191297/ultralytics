@@ -15,9 +15,9 @@ on:
 
 jobs:
   format:
-    runs-on: ubuntu-latest
     permissions:
       contents: write
+    runs-on: ubuntu-latest
     steps:
       - name: Run Ultralytics Formatting
         uses: ultralytics/actions@main
